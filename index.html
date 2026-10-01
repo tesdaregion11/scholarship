@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <title>DRMIS - Region XI</title>
+  <title>Scholarship Monitoring - Region XI</title>
   
   <style>
     * {
@@ -20,7 +20,7 @@
       -webkit-tap-highlight-color: transparent;
     }
     
-    #drmis-iframe {
+    #scholarship-iframe {
       position: fixed;
       top: 0;
       left: 0;
@@ -123,12 +123,12 @@
   
   <div class="loading" id="loading">
     <div class="spinner"></div>
-    <p>Loading DRMIS System...</p>
+    <p>Loading Scholarship System...</p>
   </div>
 
   <!-- ✅ FIXED: Added allow-top-navigation-by-user-activation -->
   <iframe 
-    id="drmis-iframe"
+    id="scholarship-iframe"
     src="https://script.google.com/a/macros/tesda.gov.ph/s/AKfycbw20suGxqVaOMXruQwXC4fOXSEQyVeC1boG7f3mBEk77eL8lt8YBAeoFaC63W0qAu_StA/exec"
     allowfullscreen="true"
     loading="lazy"
@@ -142,26 +142,26 @@
 
   <div class="fallback-message" id="fallbackMessage">
     <p style="font-size: 18px; margin-bottom: 8px;">📱</p>
-    <p><strong>DRMIS System</strong></p>
+    <p><strong>Scholarship System</strong></p>
     <p style="color: #666; font-size: 14px; margin: 8px 0;">Your browser may not support IFrames.</p>
     <a href="https://script.google.com/a/macros/tesda.gov.ph/s/AKfycbw20suGxqVaOMXruQwXC4fOXSEQyVeC1boG7f3mBEk77eL8lt8YBAeoFaC63W0qAu_StA/exec" target="_blank">Open directly</a>
   </div>
 
   <script>
-    const iframe = document.getElementById('drmis-iframe');
+    const iframe = document.getElementById('scholarship-iframe');
     const loading = document.getElementById('loading');
     const fullscreenBtn = document.getElementById('fullscreenBtn');
     const fallbackMessage = document.getElementById('fallbackMessage');
     
     iframe.addEventListener('load', function() {
       loading.style.display = 'none';
-      console.log('✅ DRMIS loaded successfully');
+      console.log('✅ Scholarship loaded successfully');
     });
     
     iframe.addEventListener('error', function() {
       loading.style.display = 'none';
       fallbackMessage.style.display = 'block';
-      console.error('❌ Failed to load DRMIS');
+      console.error('❌ Failed to load Scholarship');
     });
     
     function toggleFullscreen() {
@@ -212,7 +212,7 @@
       }
     });
     
-    console.log('🚀 DRMIS loaded via GitHub Pages');
+    console.log('🚀 scholarship loaded via GitHub Pages');
     console.log('📎 Iframe URL:', iframe.src);
     console.log('📱 Mobile optimized version');
   </script>
